@@ -1,0 +1,69 @@
+:root {
+  color-scheme: light dark;
+  --accent: #0a84ff;
+}
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  margin: 0;
+  padding: 0 16px 60px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+header h1 { margin-bottom: 0; }
+nav { display: flex; gap: 4px; margin: 12px 0 20px; flex-wrap: wrap; }
+nav a {
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(127, 127, 127, 0.12);
+}
+nav a.active { background: var(--accent); color: #fff; }
+.card {
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+.row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.dim { opacity: 0.6; font-size: 0.9em; }
+.warn { color: #d97706; font-weight: 600; }
+button {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 7px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:disabled { opacity: 0.5; cursor: default; }
+button.lane-btn { background: rgba(127, 127, 127, 0.2); color: inherit; margin: 2px; }
+button.lane-btn.active { background: var(--accent); color: #fff; }
+input[type='text'], input[type='number'], input:not([type]) {
+  padding: 7px 10px;
+  border: 1px solid rgba(127, 127, 127, 0.4);
+  border-radius: 7px;
+  background: transparent;
+  color: inherit;
+  font-size: 14px;
+}
+.field { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+th, td { border: 1px solid rgba(127, 127, 127, 0.3); padding: 6px 12px; text-align: left; }
+.event-row.active { outline: 2px solid var(--accent); border-radius: 6px; }
+.calib-canvas { max-width: 100%; cursor: crosshair; touch-action: none; }
+.scan-canvas, .read-canvas { image-rendering: pixelated; min-width: 100%; }
+.read-canvas { cursor: crosshair; }
+.zoom-canvas { image-rendering: pixelated; }
+.scroll-x { overflow-x: auto; }
+.readout {
+  font-family: monospace;
+  font-size: 16px;
+  padding: 8px 12px;
+  background: rgba(10, 132, 255, 0.1);
+  border-radius: 7px;
+  margin: 8px 0;
+}
+progress { height: 14px; }
